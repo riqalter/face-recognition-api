@@ -15,6 +15,9 @@ if not os.path.exists(db_dir):
 
 # Path to the log file
 log_path = './log.txt'
+if not os.path.exists(log_path):
+    with open(log_path, 'w') as f:
+        f.write('')
 
 @app.route('/', methods=['GET'])
 def home():
